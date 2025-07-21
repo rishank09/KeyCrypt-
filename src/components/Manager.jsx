@@ -10,7 +10,7 @@ const Manager = () => {
     const [passwordArray, setPasswordArray] = useState([]);
 
     const getPasswords = async () => {
-        let req = await fetch("http://localhost:3000/");
+        let req = await fetch("https://keycrypt-we28.onrender.com");
         let passwords = await req.json();
         setPasswordArray(passwords);
     };
@@ -41,7 +41,7 @@ const Manager = () => {
 
     const savePassword = async () => {
         if (form.site.length > 3 && form.username.length > 3 && form.password.length > 3) {
-            await fetch("http://localhost:3000/", {
+            await fetch("https://keycrypt-we28.onrender.com", {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ id: form.id }),
@@ -50,7 +50,7 @@ const Manager = () => {
             const newPass = { ...form, id: uuidv4() };
             setPasswordArray([...passwordArray, newPass]);
 
-            await fetch("http://localhost:3000/", {
+            await fetch("https://keycrypt-we28.onrender.com", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newPass),
@@ -74,7 +74,7 @@ const Manager = () => {
         let confirmDelete = confirm("Do you really want to delete this password?");
         if (confirmDelete) {
             setPasswordArray(passwordArray.filter(item => item.id !== id));
-            await fetch("http://localhost:3000/", {
+            await fetch("https://keycrypt-we28.onrender.com", {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ id }),
