@@ -1,8 +1,26 @@
-# React + Vite
+🔐 KeyCrypt – Your Personal Password Manager
+KeyCrypt is a secure, password manager built using React, Tailwind CSS, and Node.js. Designed with simplicity and speed in mind, it allows users to store, update, delete, and copy credentials with ease — all from a sleek developer-style interface.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Features
+🌒 Modern Dark UI – Clean, professional layout with a developer-themed design
 
-Currently, two official plugins are available:
+🧠 Smart Credential Storage – Save and manage website logins (site, username, password)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔐 Edit + Delete Support – Modify or remove saved credentials anytime
+
+📋 One-Click Copy – Instantly copy site URLs, usernames, or passwords to clipboard
+
+👁️ Password Visibility Toggle – Show/hide passwords securely
+
+🔄 Live Updates – Password list updates immediately after any action
+
+📦 UUID-based Unique IDs – Ensures secure and conflict-free password entries
+
+✅ Toast Notifications – Real-time feedback on every action (copy, save, delete)
+
+🛠️ Tech Stack
+Frontend: React, Tailwind CSS, Lordicon animations, React Toastify
+
+Backend: Node.js + Express.js (with support for local mock APIs or MongoDB)
+
+Other Tools: UUID, Clipboard API
